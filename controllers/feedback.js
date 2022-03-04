@@ -17,11 +17,10 @@ exports.emailFeedback = (req, res) => {
             <h2>Sender email: ${email}</h2>
             <h2>Sender message: ${message}</h2>
             <br />
-            ${uploadedFiles&&uploadedFiles.map(f => {
+            ${uploadedFiles.map(f => {
                 return 
-               ` 
-                <img src="${f.secure_url}" alt="${f.original_filename}" style="width:50%;overflow:hidden;padding:50px;"/>;
-`
+               ` <img src="${f.secure_url}" alt="${f.original_filename}" style="width:50%;overflow:hidden;padding:50px;"/>;`
+
                 
             })}
             <hr />
