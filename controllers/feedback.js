@@ -10,7 +10,7 @@ exports.emailFeedback = (req, res) => {
         subject: 'Feedback form',
         html: `
 
-        <div style={{color: "blue"}}>
+       
             <h1>Customer Feedback Form</h1>
             <hr />
             <h2>Sender name: ${name}</h2>
@@ -18,15 +18,15 @@ exports.emailFeedback = (req, res) => {
             <h2>Sender message: ${message}</h2>
             <br />
             ${uploadedFiles&&uploadedFiles.map(f => {
-                return (
+                return 
                ` 
-                <img src="${f.secure_url}" alt="${f.original_filename}" style="width:50%;overflow:hidden;padding:50px;"/>
+                <img src="${f.secure_url}" alt="${f.original_filename}" style="width:50%;overflow:hidden;padding:50px;"/>;
 `
-                )
+                
             })}
             <hr />
             <p>https://feedbackonline.com</p>
-            </div>
+           
 
         `
     };
