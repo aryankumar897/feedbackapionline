@@ -25,23 +25,22 @@ exports.emailFeedback = (req, res) => {
             })}
             <hr />
             <p>https://feedbackonline.com</p>
-           
-
+        
         `
     };
 
     sgMail
         .send(emailData)
         .then(sent => {
-            console.log(sent);
+          //  console.log(sent);
             return res.json({
                 success: true
             });
         })
         .catch(err => {
-            console.log(err);
+           // console.log(err);
             return res.json({
-                success: false
+                success: err
             });
         });
 };
