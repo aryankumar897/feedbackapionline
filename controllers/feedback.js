@@ -40,7 +40,7 @@ exports.emailFeedback = (req, res) => {
         .catch(err => {
            // console.log(err);
             return res.json({
-                success: err
+                success: false
             });
         });
 };
