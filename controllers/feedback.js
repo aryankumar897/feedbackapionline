@@ -34,7 +34,7 @@ exports.emailFeedback = (req, res) => {
         .catch(err => {
             
             return res.json({
-                success: false
+                success: err
             });
         });
 };
